@@ -5508,8 +5508,6 @@ SWIGINTERN PyObject *_wrap_gg_session_uin_set(PyObject *SWIGUNUSEDPARM(self), Py
   uin_t arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
   PyObject * obj0 = 0 ;
   PyObject * obj1 = 0 ;
   
@@ -5520,15 +5518,7 @@ SWIGINTERN PyObject *_wrap_gg_session_uin_set(PyObject *SWIGUNUSEDPARM(self), Py
   }
   arg1 = (struct gg_session *)(argp1);
   {
-    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_uint32_t,  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "gg_session_uin_set" "', argument " "2"" of type '" "uin_t""'"); 
-    }  
-    if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gg_session_uin_set" "', argument " "2"" of type '" "uin_t""'");
-    } else {
-      arg2 = *((uin_t *)(argp2));
-    }
+    arg2 = PyInt_AsLong(obj1);
   }
   if (arg1) (arg1)->uin = arg2;
   resultobj = SWIG_Py_Void();
@@ -5553,7 +5543,9 @@ SWIGINTERN PyObject *_wrap_gg_session_uin_get(PyObject *SWIGUNUSEDPARM(self), Py
   }
   arg1 = (struct gg_session *)(argp1);
   result =  ((arg1)->uin);
-  resultobj = SWIG_NewPointerObj((uin_t *)memcpy((uin_t *)malloc(sizeof(uin_t)),&result,sizeof(uin_t)), SWIGTYPE_p_uint32_t, SWIG_POINTER_OWN |  0 );
+  {
+    resultobj = PyInt_FromLong(result);
+  }
   return resultobj;
 fail:
   return NULL;
@@ -9895,8 +9887,6 @@ SWIGINTERN PyObject *_wrap_gg_dcc_uin_set(PyObject *SWIGUNUSEDPARM(self), PyObje
   uin_t arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
   PyObject * obj0 = 0 ;
   PyObject * obj1 = 0 ;
   
@@ -9907,15 +9897,7 @@ SWIGINTERN PyObject *_wrap_gg_dcc_uin_set(PyObject *SWIGUNUSEDPARM(self), PyObje
   }
   arg1 = (struct gg_dcc *)(argp1);
   {
-    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_uint32_t,  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "gg_dcc_uin_set" "', argument " "2"" of type '" "uin_t""'"); 
-    }  
-    if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gg_dcc_uin_set" "', argument " "2"" of type '" "uin_t""'");
-    } else {
-      arg2 = *((uin_t *)(argp2));
-    }
+    arg2 = PyInt_AsLong(obj1);
   }
   if (arg1) (arg1)->uin = arg2;
   resultobj = SWIG_Py_Void();
@@ -9940,7 +9922,9 @@ SWIGINTERN PyObject *_wrap_gg_dcc_uin_get(PyObject *SWIGUNUSEDPARM(self), PyObje
   }
   arg1 = (struct gg_dcc *)(argp1);
   result =  ((arg1)->uin);
-  resultobj = SWIG_NewPointerObj((uin_t *)memcpy((uin_t *)malloc(sizeof(uin_t)),&result,sizeof(uin_t)), SWIGTYPE_p_uint32_t, SWIG_POINTER_OWN |  0 );
+  {
+    resultobj = PyInt_FromLong(result);
+  }
   return resultobj;
 fail:
   return NULL;
@@ -9953,8 +9937,6 @@ SWIGINTERN PyObject *_wrap_gg_dcc_peer_uin_set(PyObject *SWIGUNUSEDPARM(self), P
   uin_t arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
   PyObject * obj0 = 0 ;
   PyObject * obj1 = 0 ;
   
@@ -9965,15 +9947,7 @@ SWIGINTERN PyObject *_wrap_gg_dcc_peer_uin_set(PyObject *SWIGUNUSEDPARM(self), P
   }
   arg1 = (struct gg_dcc *)(argp1);
   {
-    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_uint32_t,  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "gg_dcc_peer_uin_set" "', argument " "2"" of type '" "uin_t""'"); 
-    }  
-    if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gg_dcc_peer_uin_set" "', argument " "2"" of type '" "uin_t""'");
-    } else {
-      arg2 = *((uin_t *)(argp2));
-    }
+    arg2 = PyInt_AsLong(obj1);
   }
   if (arg1) (arg1)->peer_uin = arg2;
   resultobj = SWIG_Py_Void();
@@ -9998,7 +9972,9 @@ SWIGINTERN PyObject *_wrap_gg_dcc_peer_uin_get(PyObject *SWIGUNUSEDPARM(self), P
   }
   arg1 = (struct gg_dcc *)(argp1);
   result =  ((arg1)->peer_uin);
-  resultobj = SWIG_NewPointerObj((uin_t *)memcpy((uin_t *)malloc(sizeof(uin_t)),&result,sizeof(uin_t)), SWIGTYPE_p_uint32_t, SWIG_POINTER_OWN |  0 );
+  {
+    resultobj = PyInt_FromLong(result);
+  }
   return resultobj;
 fail:
   return NULL;
@@ -11224,8 +11200,6 @@ SWIGINTERN PyObject *_wrap_gg_dcc7_uin_set(PyObject *SWIGUNUSEDPARM(self), PyObj
   uin_t arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
   PyObject * obj0 = 0 ;
   PyObject * obj1 = 0 ;
   
@@ -11236,15 +11210,7 @@ SWIGINTERN PyObject *_wrap_gg_dcc7_uin_set(PyObject *SWIGUNUSEDPARM(self), PyObj
   }
   arg1 = (struct gg_dcc7 *)(argp1);
   {
-    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_uint32_t,  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "gg_dcc7_uin_set" "', argument " "2"" of type '" "uin_t""'"); 
-    }  
-    if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gg_dcc7_uin_set" "', argument " "2"" of type '" "uin_t""'");
-    } else {
-      arg2 = *((uin_t *)(argp2));
-    }
+    arg2 = PyInt_AsLong(obj1);
   }
   if (arg1) (arg1)->uin = arg2;
   resultobj = SWIG_Py_Void();
@@ -11269,7 +11235,9 @@ SWIGINTERN PyObject *_wrap_gg_dcc7_uin_get(PyObject *SWIGUNUSEDPARM(self), PyObj
   }
   arg1 = (struct gg_dcc7 *)(argp1);
   result =  ((arg1)->uin);
-  resultobj = SWIG_NewPointerObj((uin_t *)memcpy((uin_t *)malloc(sizeof(uin_t)),&result,sizeof(uin_t)), SWIGTYPE_p_uint32_t, SWIG_POINTER_OWN |  0 );
+  {
+    resultobj = PyInt_FromLong(result);
+  }
   return resultobj;
 fail:
   return NULL;
@@ -11282,8 +11250,6 @@ SWIGINTERN PyObject *_wrap_gg_dcc7_peer_uin_set(PyObject *SWIGUNUSEDPARM(self), 
   uin_t arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
   PyObject * obj0 = 0 ;
   PyObject * obj1 = 0 ;
   
@@ -11294,15 +11260,7 @@ SWIGINTERN PyObject *_wrap_gg_dcc7_peer_uin_set(PyObject *SWIGUNUSEDPARM(self), 
   }
   arg1 = (struct gg_dcc7 *)(argp1);
   {
-    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_uint32_t,  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "gg_dcc7_peer_uin_set" "', argument " "2"" of type '" "uin_t""'"); 
-    }  
-    if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gg_dcc7_peer_uin_set" "', argument " "2"" of type '" "uin_t""'");
-    } else {
-      arg2 = *((uin_t *)(argp2));
-    }
+    arg2 = PyInt_AsLong(obj1);
   }
   if (arg1) (arg1)->peer_uin = arg2;
   resultobj = SWIG_Py_Void();
@@ -11327,7 +11285,9 @@ SWIGINTERN PyObject *_wrap_gg_dcc7_peer_uin_get(PyObject *SWIGUNUSEDPARM(self), 
   }
   arg1 = (struct gg_dcc7 *)(argp1);
   result =  ((arg1)->peer_uin);
-  resultobj = SWIG_NewPointerObj((uin_t *)memcpy((uin_t *)malloc(sizeof(uin_t)),&result,sizeof(uin_t)), SWIGTYPE_p_uint32_t, SWIG_POINTER_OWN |  0 );
+  {
+    resultobj = PyInt_FromLong(result);
+  }
   return resultobj;
 fail:
   return NULL;
@@ -12561,8 +12521,6 @@ SWIGINTERN PyObject *_wrap_gg_login_params_uin_set(PyObject *SWIGUNUSEDPARM(self
   uin_t arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
   PyObject * obj0 = 0 ;
   PyObject * obj1 = 0 ;
   
@@ -12573,15 +12531,7 @@ SWIGINTERN PyObject *_wrap_gg_login_params_uin_set(PyObject *SWIGUNUSEDPARM(self
   }
   arg1 = (struct gg_login_params *)(argp1);
   {
-    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_uint32_t,  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "gg_login_params_uin_set" "', argument " "2"" of type '" "uin_t""'"); 
-    }  
-    if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gg_login_params_uin_set" "', argument " "2"" of type '" "uin_t""'");
-    } else {
-      arg2 = *((uin_t *)(argp2));
-    }
+    arg2 = PyInt_AsLong(obj1);
   }
   if (arg1) (arg1)->uin = arg2;
   resultobj = SWIG_Py_Void();
@@ -12606,7 +12556,9 @@ SWIGINTERN PyObject *_wrap_gg_login_params_uin_get(PyObject *SWIGUNUSEDPARM(self
   }
   arg1 = (struct gg_login_params *)(argp1);
   result =  ((arg1)->uin);
-  resultobj = SWIG_NewPointerObj((uin_t *)memcpy((uin_t *)malloc(sizeof(uin_t)),&result,sizeof(uin_t)), SWIGTYPE_p_uint32_t, SWIG_POINTER_OWN |  0 );
+  {
+    resultobj = PyInt_FromLong(result);
+  }
   return resultobj;
 fail:
   return NULL;
@@ -14151,8 +14103,6 @@ SWIGINTERN PyObject *_wrap_gg_send_message(PyObject *SWIGUNUSEDPARM(self), PyObj
   int res1 = 0 ;
   int val2 ;
   int ecode2 = 0 ;
-  void *argp3 ;
-  int res3 = 0 ;
   void *argp4 = 0 ;
   int res4 = 0 ;
   PyObject * obj0 = 0 ;
@@ -14173,15 +14123,7 @@ SWIGINTERN PyObject *_wrap_gg_send_message(PyObject *SWIGUNUSEDPARM(self), PyObj
   } 
   arg2 = (int)(val2);
   {
-    res3 = SWIG_ConvertPtr(obj2, &argp3, SWIGTYPE_p_uint32_t,  0 );
-    if (!SWIG_IsOK(res3)) {
-      SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "gg_send_message" "', argument " "3"" of type '" "uin_t""'"); 
-    }  
-    if (!argp3) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gg_send_message" "', argument " "3"" of type '" "uin_t""'");
-    } else {
-      arg3 = *((uin_t *)(argp3));
-    }
+    arg3 = PyInt_AsLong(obj2);
   }
   res4 = SWIG_ConvertPtr(obj3, &argp4,SWIGTYPE_p_unsigned_char, 0 |  0 );
   if (!SWIG_IsOK(res4)) {
@@ -14208,8 +14150,6 @@ SWIGINTERN PyObject *_wrap_gg_send_message_richtext(PyObject *SWIGUNUSEDPARM(sel
   int res1 = 0 ;
   int val2 ;
   int ecode2 = 0 ;
-  void *argp3 ;
-  int res3 = 0 ;
   void *argp4 = 0 ;
   int res4 = 0 ;
   void *argp5 = 0 ;
@@ -14236,15 +14176,7 @@ SWIGINTERN PyObject *_wrap_gg_send_message_richtext(PyObject *SWIGUNUSEDPARM(sel
   } 
   arg2 = (int)(val2);
   {
-    res3 = SWIG_ConvertPtr(obj2, &argp3, SWIGTYPE_p_uint32_t,  0 );
-    if (!SWIG_IsOK(res3)) {
-      SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "gg_send_message_richtext" "', argument " "3"" of type '" "uin_t""'"); 
-    }  
-    if (!argp3) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gg_send_message_richtext" "', argument " "3"" of type '" "uin_t""'");
-    } else {
-      arg3 = *((uin_t *)(argp3));
-    }
+    arg3 = PyInt_AsLong(obj2);
   }
   res4 = SWIG_ConvertPtr(obj3, &argp4,SWIGTYPE_p_unsigned_char, 0 |  0 );
   if (!SWIG_IsOK(res4)) {
@@ -14414,8 +14346,6 @@ SWIGINTERN PyObject *_wrap_gg_send_message_ctcp(PyObject *SWIGUNUSEDPARM(self), 
   int res1 = 0 ;
   int val2 ;
   int ecode2 = 0 ;
-  void *argp3 ;
-  int res3 = 0 ;
   void *argp4 = 0 ;
   int res4 = 0 ;
   int val5 ;
@@ -14439,15 +14369,7 @@ SWIGINTERN PyObject *_wrap_gg_send_message_ctcp(PyObject *SWIGUNUSEDPARM(self), 
   } 
   arg2 = (int)(val2);
   {
-    res3 = SWIG_ConvertPtr(obj2, &argp3, SWIGTYPE_p_uint32_t,  0 );
-    if (!SWIG_IsOK(res3)) {
-      SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "gg_send_message_ctcp" "', argument " "3"" of type '" "uin_t""'"); 
-    }  
-    if (!argp3) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gg_send_message_ctcp" "', argument " "3"" of type '" "uin_t""'");
-    } else {
-      arg3 = *((uin_t *)(argp3));
-    }
+    arg3 = PyInt_AsLong(obj2);
   }
   res4 = SWIG_ConvertPtr(obj3, &argp4,SWIGTYPE_p_unsigned_char, 0 |  0 );
   if (!SWIG_IsOK(res4)) {
@@ -14601,8 +14523,6 @@ SWIGINTERN PyObject *_wrap_gg_image_request(PyObject *SWIGUNUSEDPARM(self), PyOb
   uint32_t arg4 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
   int val3 ;
   int ecode3 = 0 ;
   void *argp4 ;
@@ -14620,15 +14540,7 @@ SWIGINTERN PyObject *_wrap_gg_image_request(PyObject *SWIGUNUSEDPARM(self), PyOb
   }
   arg1 = (struct gg_session *)(argp1);
   {
-    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_uint32_t,  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "gg_image_request" "', argument " "2"" of type '" "uin_t""'"); 
-    }  
-    if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gg_image_request" "', argument " "2"" of type '" "uin_t""'");
-    } else {
-      arg2 = *((uin_t *)(argp2));
-    }
+    arg2 = PyInt_AsLong(obj1);
   }
   ecode3 = SWIG_AsVal_int(obj2, &val3);
   if (!SWIG_IsOK(ecode3)) {
@@ -14663,8 +14575,6 @@ SWIGINTERN PyObject *_wrap_gg_image_reply(PyObject *SWIGUNUSEDPARM(self), PyObje
   int arg5 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
   int res3 ;
   char *buf3 = 0 ;
   int alloc3 = 0 ;
@@ -14687,15 +14597,7 @@ SWIGINTERN PyObject *_wrap_gg_image_reply(PyObject *SWIGUNUSEDPARM(self), PyObje
   }
   arg1 = (struct gg_session *)(argp1);
   {
-    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_uint32_t,  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "gg_image_reply" "', argument " "2"" of type '" "uin_t""'"); 
-    }  
-    if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gg_image_reply" "', argument " "2"" of type '" "uin_t""'");
-    } else {
-      arg2 = *((uin_t *)(argp2));
-    }
+    arg2 = PyInt_AsLong(obj1);
   }
   res3 = SWIG_AsCharPtrAndSize(obj2, &buf3, NULL, &alloc3);
   if (!SWIG_IsOK(res3)) {
@@ -14731,8 +14633,6 @@ SWIGINTERN PyObject *_wrap_gg_typing_notification(PyObject *SWIGUNUSEDPARM(self)
   int arg3 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
   int val3 ;
   int ecode3 = 0 ;
   PyObject * obj0 = 0 ;
@@ -14747,15 +14647,7 @@ SWIGINTERN PyObject *_wrap_gg_typing_notification(PyObject *SWIGUNUSEDPARM(self)
   }
   arg1 = (struct gg_session *)(argp1);
   {
-    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_uint32_t,  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "gg_typing_notification" "', argument " "2"" of type '" "uin_t""'"); 
-    }  
-    if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gg_typing_notification" "', argument " "2"" of type '" "uin_t""'");
-    } else {
-      arg2 = *((uin_t *)(argp2));
-    }
+    arg2 = PyInt_AsLong(obj1);
   }
   ecode3 = SWIG_AsVal_int(obj2, &val3);
   if (!SWIG_IsOK(ecode3)) {
@@ -15372,8 +15264,6 @@ SWIGINTERN PyObject *_wrap_gg_pubdir50_s_next_set(PyObject *SWIGUNUSEDPARM(self)
   uin_t arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
   PyObject * obj0 = 0 ;
   PyObject * obj1 = 0 ;
   
@@ -15384,15 +15274,7 @@ SWIGINTERN PyObject *_wrap_gg_pubdir50_s_next_set(PyObject *SWIGUNUSEDPARM(self)
   }
   arg1 = (struct gg_pubdir50_s *)(argp1);
   {
-    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_uint32_t,  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "gg_pubdir50_s_next_set" "', argument " "2"" of type '" "uin_t""'"); 
-    }  
-    if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gg_pubdir50_s_next_set" "', argument " "2"" of type '" "uin_t""'");
-    } else {
-      arg2 = *((uin_t *)(argp2));
-    }
+    arg2 = PyInt_AsLong(obj1);
   }
   if (arg1) (arg1)->next = arg2;
   resultobj = SWIG_Py_Void();
@@ -15417,7 +15299,9 @@ SWIGINTERN PyObject *_wrap_gg_pubdir50_s_next_get(PyObject *SWIGUNUSEDPARM(self)
   }
   arg1 = (struct gg_pubdir50_s *)(argp1);
   result =  ((arg1)->next);
-  resultobj = SWIG_NewPointerObj((uin_t *)memcpy((uin_t *)malloc(sizeof(uin_t)),&result,sizeof(uin_t)), SWIGTYPE_p_uint32_t, SWIG_POINTER_OWN |  0 );
+  {
+    resultobj = PyInt_FromLong(result);
+  }
   return resultobj;
 fail:
   return NULL;
@@ -15685,8 +15569,6 @@ SWIGINTERN PyObject *_wrap_gg_event_msg_sender_set(PyObject *SWIGUNUSEDPARM(self
   uin_t arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
   PyObject * obj0 = 0 ;
   PyObject * obj1 = 0 ;
   
@@ -15697,15 +15579,7 @@ SWIGINTERN PyObject *_wrap_gg_event_msg_sender_set(PyObject *SWIGUNUSEDPARM(self
   }
   arg1 = (struct gg_event_msg *)(argp1);
   {
-    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_uint32_t,  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "gg_event_msg_sender_set" "', argument " "2"" of type '" "uin_t""'"); 
-    }  
-    if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gg_event_msg_sender_set" "', argument " "2"" of type '" "uin_t""'");
-    } else {
-      arg2 = *((uin_t *)(argp2));
-    }
+    arg2 = PyInt_AsLong(obj1);
   }
   if (arg1) (arg1)->sender = arg2;
   resultobj = SWIG_Py_Void();
@@ -15730,7 +15604,9 @@ SWIGINTERN PyObject *_wrap_gg_event_msg_sender_get(PyObject *SWIGUNUSEDPARM(self
   }
   arg1 = (struct gg_event_msg *)(argp1);
   result =  ((arg1)->sender);
-  resultobj = SWIG_NewPointerObj((uin_t *)memcpy((uin_t *)malloc(sizeof(uin_t)),&result,sizeof(uin_t)), SWIGTYPE_p_uint32_t, SWIG_POINTER_OWN |  0 );
+  {
+    resultobj = PyInt_FromLong(result);
+  }
   return resultobj;
 fail:
   return NULL;
@@ -16425,8 +16301,6 @@ SWIGINTERN PyObject *_wrap_gg_event_status_uin_set(PyObject *SWIGUNUSEDPARM(self
   uin_t arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
   PyObject * obj0 = 0 ;
   PyObject * obj1 = 0 ;
   
@@ -16437,15 +16311,7 @@ SWIGINTERN PyObject *_wrap_gg_event_status_uin_set(PyObject *SWIGUNUSEDPARM(self
   }
   arg1 = (struct gg_event_status *)(argp1);
   {
-    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_uint32_t,  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "gg_event_status_uin_set" "', argument " "2"" of type '" "uin_t""'"); 
-    }  
-    if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gg_event_status_uin_set" "', argument " "2"" of type '" "uin_t""'");
-    } else {
-      arg2 = *((uin_t *)(argp2));
-    }
+    arg2 = PyInt_AsLong(obj1);
   }
   if (arg1) (arg1)->uin = arg2;
   resultobj = SWIG_Py_Void();
@@ -16470,7 +16336,9 @@ SWIGINTERN PyObject *_wrap_gg_event_status_uin_get(PyObject *SWIGUNUSEDPARM(self
   }
   arg1 = (struct gg_event_status *)(argp1);
   result =  ((arg1)->uin);
-  resultobj = SWIG_NewPointerObj((uin_t *)memcpy((uin_t *)malloc(sizeof(uin_t)),&result,sizeof(uin_t)), SWIGTYPE_p_uint32_t, SWIG_POINTER_OWN |  0 );
+  {
+    resultobj = PyInt_FromLong(result);
+  }
   return resultobj;
 fail:
   return NULL;
@@ -16643,8 +16511,6 @@ SWIGINTERN PyObject *_wrap_gg_event_status60_uin_set(PyObject *SWIGUNUSEDPARM(se
   uin_t arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
   PyObject * obj0 = 0 ;
   PyObject * obj1 = 0 ;
   
@@ -16655,15 +16521,7 @@ SWIGINTERN PyObject *_wrap_gg_event_status60_uin_set(PyObject *SWIGUNUSEDPARM(se
   }
   arg1 = (struct gg_event_status60 *)(argp1);
   {
-    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_uint32_t,  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "gg_event_status60_uin_set" "', argument " "2"" of type '" "uin_t""'"); 
-    }  
-    if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gg_event_status60_uin_set" "', argument " "2"" of type '" "uin_t""'");
-    } else {
-      arg2 = *((uin_t *)(argp2));
-    }
+    arg2 = PyInt_AsLong(obj1);
   }
   if (arg1) (arg1)->uin = arg2;
   resultobj = SWIG_Py_Void();
@@ -16688,7 +16546,9 @@ SWIGINTERN PyObject *_wrap_gg_event_status60_uin_get(PyObject *SWIGUNUSEDPARM(se
   }
   arg1 = (struct gg_event_status60 *)(argp1);
   result =  ((arg1)->uin);
-  resultobj = SWIG_NewPointerObj((uin_t *)memcpy((uin_t *)malloc(sizeof(uin_t)),&result,sizeof(uin_t)), SWIGTYPE_p_uint32_t, SWIG_POINTER_OWN |  0 );
+  {
+    resultobj = PyInt_FromLong(result);
+  }
   return resultobj;
 fail:
   return NULL;
@@ -17133,8 +16993,6 @@ SWIGINTERN PyObject *_wrap_gg_event_notify60_uin_set(PyObject *SWIGUNUSEDPARM(se
   uin_t arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
   PyObject * obj0 = 0 ;
   PyObject * obj1 = 0 ;
   
@@ -17145,15 +17003,7 @@ SWIGINTERN PyObject *_wrap_gg_event_notify60_uin_set(PyObject *SWIGUNUSEDPARM(se
   }
   arg1 = (struct gg_event_notify60 *)(argp1);
   {
-    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_uint32_t,  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "gg_event_notify60_uin_set" "', argument " "2"" of type '" "uin_t""'"); 
-    }  
-    if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gg_event_notify60_uin_set" "', argument " "2"" of type '" "uin_t""'");
-    } else {
-      arg2 = *((uin_t *)(argp2));
-    }
+    arg2 = PyInt_AsLong(obj1);
   }
   if (arg1) (arg1)->uin = arg2;
   resultobj = SWIG_Py_Void();
@@ -17178,7 +17028,9 @@ SWIGINTERN PyObject *_wrap_gg_event_notify60_uin_get(PyObject *SWIGUNUSEDPARM(se
   }
   arg1 = (struct gg_event_notify60 *)(argp1);
   result =  ((arg1)->uin);
-  resultobj = SWIG_NewPointerObj((uin_t *)memcpy((uin_t *)malloc(sizeof(uin_t)),&result,sizeof(uin_t)), SWIGTYPE_p_uint32_t, SWIG_POINTER_OWN |  0 );
+  {
+    resultobj = PyInt_FromLong(result);
+  }
   return resultobj;
 fail:
   return NULL;
@@ -17623,8 +17475,6 @@ SWIGINTERN PyObject *_wrap_gg_event_ack_recipient_set(PyObject *SWIGUNUSEDPARM(s
   uin_t arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
   PyObject * obj0 = 0 ;
   PyObject * obj1 = 0 ;
   
@@ -17635,15 +17485,7 @@ SWIGINTERN PyObject *_wrap_gg_event_ack_recipient_set(PyObject *SWIGUNUSEDPARM(s
   }
   arg1 = (struct gg_event_ack *)(argp1);
   {
-    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_uint32_t,  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "gg_event_ack_recipient_set" "', argument " "2"" of type '" "uin_t""'"); 
-    }  
-    if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gg_event_ack_recipient_set" "', argument " "2"" of type '" "uin_t""'");
-    } else {
-      arg2 = *((uin_t *)(argp2));
-    }
+    arg2 = PyInt_AsLong(obj1);
   }
   if (arg1) (arg1)->recipient = arg2;
   resultobj = SWIG_Py_Void();
@@ -17668,7 +17510,9 @@ SWIGINTERN PyObject *_wrap_gg_event_ack_recipient_get(PyObject *SWIGUNUSEDPARM(s
   }
   arg1 = (struct gg_event_ack *)(argp1);
   result =  ((arg1)->recipient);
-  resultobj = SWIG_NewPointerObj((uin_t *)memcpy((uin_t *)malloc(sizeof(uin_t)),&result,sizeof(uin_t)), SWIGTYPE_p_uint32_t, SWIG_POINTER_OWN |  0 );
+  {
+    resultobj = PyInt_FromLong(result);
+  }
   return resultobj;
 fail:
   return NULL;
@@ -18125,8 +17969,6 @@ SWIGINTERN PyObject *_wrap_gg_event_image_request_sender_set(PyObject *SWIGUNUSE
   uin_t arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
   PyObject * obj0 = 0 ;
   PyObject * obj1 = 0 ;
   
@@ -18137,15 +17979,7 @@ SWIGINTERN PyObject *_wrap_gg_event_image_request_sender_set(PyObject *SWIGUNUSE
   }
   arg1 = (struct gg_event_image_request *)(argp1);
   {
-    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_uint32_t,  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "gg_event_image_request_sender_set" "', argument " "2"" of type '" "uin_t""'"); 
-    }  
-    if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gg_event_image_request_sender_set" "', argument " "2"" of type '" "uin_t""'");
-    } else {
-      arg2 = *((uin_t *)(argp2));
-    }
+    arg2 = PyInt_AsLong(obj1);
   }
   if (arg1) (arg1)->sender = arg2;
   resultobj = SWIG_Py_Void();
@@ -18170,7 +18004,9 @@ SWIGINTERN PyObject *_wrap_gg_event_image_request_sender_get(PyObject *SWIGUNUSE
   }
   arg1 = (struct gg_event_image_request *)(argp1);
   result =  ((arg1)->sender);
-  resultobj = SWIG_NewPointerObj((uin_t *)memcpy((uin_t *)malloc(sizeof(uin_t)),&result,sizeof(uin_t)), SWIGTYPE_p_uint32_t, SWIG_POINTER_OWN |  0 );
+  {
+    resultobj = PyInt_FromLong(result);
+  }
   return resultobj;
 fail:
   return NULL;
@@ -18340,8 +18176,6 @@ SWIGINTERN PyObject *_wrap_gg_event_image_reply_sender_set(PyObject *SWIGUNUSEDP
   uin_t arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
   PyObject * obj0 = 0 ;
   PyObject * obj1 = 0 ;
   
@@ -18352,15 +18186,7 @@ SWIGINTERN PyObject *_wrap_gg_event_image_reply_sender_set(PyObject *SWIGUNUSEDP
   }
   arg1 = (struct gg_event_image_reply *)(argp1);
   {
-    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_uint32_t,  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "gg_event_image_reply_sender_set" "', argument " "2"" of type '" "uin_t""'"); 
-    }  
-    if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gg_event_image_reply_sender_set" "', argument " "2"" of type '" "uin_t""'");
-    } else {
-      arg2 = *((uin_t *)(argp2));
-    }
+    arg2 = PyInt_AsLong(obj1);
   }
   if (arg1) (arg1)->sender = arg2;
   resultobj = SWIG_Py_Void();
@@ -18385,7 +18211,9 @@ SWIGINTERN PyObject *_wrap_gg_event_image_reply_sender_get(PyObject *SWIGUNUSEDP
   }
   arg1 = (struct gg_event_image_reply *)(argp1);
   result =  ((arg1)->sender);
-  resultobj = SWIG_NewPointerObj((uin_t *)memcpy((uin_t *)malloc(sizeof(uin_t)),&result,sizeof(uin_t)), SWIGTYPE_p_uint32_t, SWIG_POINTER_OWN |  0 );
+  {
+    resultobj = PyInt_FromLong(result);
+  }
   return resultobj;
 fail:
   return NULL;
@@ -19464,8 +19292,6 @@ SWIGINTERN PyObject *_wrap_gg_event_typing_notification_uin_set(PyObject *SWIGUN
   uin_t arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
   PyObject * obj0 = 0 ;
   PyObject * obj1 = 0 ;
   
@@ -19476,15 +19302,7 @@ SWIGINTERN PyObject *_wrap_gg_event_typing_notification_uin_set(PyObject *SWIGUN
   }
   arg1 = (struct gg_event_typing_notification *)(argp1);
   {
-    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_uint32_t,  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "gg_event_typing_notification_uin_set" "', argument " "2"" of type '" "uin_t""'"); 
-    }  
-    if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gg_event_typing_notification_uin_set" "', argument " "2"" of type '" "uin_t""'");
-    } else {
-      arg2 = *((uin_t *)(argp2));
-    }
+    arg2 = PyInt_AsLong(obj1);
   }
   if (arg1) (arg1)->uin = arg2;
   resultobj = SWIG_Py_Void();
@@ -19509,7 +19327,9 @@ SWIGINTERN PyObject *_wrap_gg_event_typing_notification_uin_get(PyObject *SWIGUN
   }
   arg1 = (struct gg_event_typing_notification *)(argp1);
   result =  ((arg1)->uin);
-  resultobj = SWIG_NewPointerObj((uin_t *)memcpy((uin_t *)malloc(sizeof(uin_t)),&result,sizeof(uin_t)), SWIGTYPE_p_uint32_t, SWIG_POINTER_OWN |  0 );
+  {
+    resultobj = PyInt_FromLong(result);
+  }
   return resultobj;
 fail:
   return NULL;
@@ -19830,8 +19650,6 @@ SWIGINTERN PyObject *_wrap_gg_event_user_data_user_uin_set(PyObject *SWIGUNUSEDP
   uin_t arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
   PyObject * obj0 = 0 ;
   PyObject * obj1 = 0 ;
   
@@ -19842,15 +19660,7 @@ SWIGINTERN PyObject *_wrap_gg_event_user_data_user_uin_set(PyObject *SWIGUNUSEDP
   }
   arg1 = (struct gg_event_user_data_user *)(argp1);
   {
-    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_uint32_t,  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "gg_event_user_data_user_uin_set" "', argument " "2"" of type '" "uin_t""'"); 
-    }  
-    if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gg_event_user_data_user_uin_set" "', argument " "2"" of type '" "uin_t""'");
-    } else {
-      arg2 = *((uin_t *)(argp2));
-    }
+    arg2 = PyInt_AsLong(obj1);
   }
   if (arg1) (arg1)->uin = arg2;
   resultobj = SWIG_Py_Void();
@@ -19875,7 +19685,9 @@ SWIGINTERN PyObject *_wrap_gg_event_user_data_user_uin_get(PyObject *SWIGUNUSEDP
   }
   arg1 = (struct gg_event_user_data_user *)(argp1);
   result =  ((arg1)->uin);
-  resultobj = SWIG_NewPointerObj((uin_t *)memcpy((uin_t *)malloc(sizeof(uin_t)),&result,sizeof(uin_t)), SWIGTYPE_p_uint32_t, SWIG_POINTER_OWN |  0 );
+  {
+    resultobj = PyInt_FromLong(result);
+  }
   return resultobj;
 fail:
   return NULL;
@@ -22942,8 +22754,6 @@ SWIGINTERN PyObject *_wrap_gg_add_notify_ex(PyObject *SWIGUNUSEDPARM(self), PyOb
   char arg3 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
   char val3 ;
   int ecode3 = 0 ;
   PyObject * obj0 = 0 ;
@@ -22958,15 +22768,7 @@ SWIGINTERN PyObject *_wrap_gg_add_notify_ex(PyObject *SWIGUNUSEDPARM(self), PyOb
   }
   arg1 = (struct gg_session *)(argp1);
   {
-    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_uint32_t,  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "gg_add_notify_ex" "', argument " "2"" of type '" "uin_t""'"); 
-    }  
-    if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gg_add_notify_ex" "', argument " "2"" of type '" "uin_t""'");
-    } else {
-      arg2 = *((uin_t *)(argp2));
-    }
+    arg2 = PyInt_AsLong(obj1);
   }
   ecode3 = SWIG_AsVal_char(obj2, &val3);
   if (!SWIG_IsOK(ecode3)) {
@@ -22987,8 +22789,6 @@ SWIGINTERN PyObject *_wrap_gg_add_notify(PyObject *SWIGUNUSEDPARM(self), PyObjec
   uin_t arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
   PyObject * obj0 = 0 ;
   PyObject * obj1 = 0 ;
   int result;
@@ -23000,15 +22800,7 @@ SWIGINTERN PyObject *_wrap_gg_add_notify(PyObject *SWIGUNUSEDPARM(self), PyObjec
   }
   arg1 = (struct gg_session *)(argp1);
   {
-    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_uint32_t,  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "gg_add_notify" "', argument " "2"" of type '" "uin_t""'"); 
-    }  
-    if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gg_add_notify" "', argument " "2"" of type '" "uin_t""'");
-    } else {
-      arg2 = *((uin_t *)(argp2));
-    }
+    arg2 = PyInt_AsLong(obj1);
   }
   result = (int)gg_add_notify(arg1,arg2);
   resultobj = SWIG_From_int((int)(result));
@@ -23025,8 +22817,6 @@ SWIGINTERN PyObject *_wrap_gg_remove_notify_ex(PyObject *SWIGUNUSEDPARM(self), P
   char arg3 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
   char val3 ;
   int ecode3 = 0 ;
   PyObject * obj0 = 0 ;
@@ -23041,15 +22831,7 @@ SWIGINTERN PyObject *_wrap_gg_remove_notify_ex(PyObject *SWIGUNUSEDPARM(self), P
   }
   arg1 = (struct gg_session *)(argp1);
   {
-    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_uint32_t,  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "gg_remove_notify_ex" "', argument " "2"" of type '" "uin_t""'"); 
-    }  
-    if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gg_remove_notify_ex" "', argument " "2"" of type '" "uin_t""'");
-    } else {
-      arg2 = *((uin_t *)(argp2));
-    }
+    arg2 = PyInt_AsLong(obj1);
   }
   ecode3 = SWIG_AsVal_char(obj2, &val3);
   if (!SWIG_IsOK(ecode3)) {
@@ -23070,8 +22852,6 @@ SWIGINTERN PyObject *_wrap_gg_remove_notify(PyObject *SWIGUNUSEDPARM(self), PyOb
   uin_t arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
   PyObject * obj0 = 0 ;
   PyObject * obj1 = 0 ;
   int result;
@@ -23083,15 +22863,7 @@ SWIGINTERN PyObject *_wrap_gg_remove_notify(PyObject *SWIGUNUSEDPARM(self), PyOb
   }
   arg1 = (struct gg_session *)(argp1);
   {
-    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_uint32_t,  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "gg_remove_notify" "', argument " "2"" of type '" "uin_t""'"); 
-    }  
-    if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gg_remove_notify" "', argument " "2"" of type '" "uin_t""'");
-    } else {
-      arg2 = *((uin_t *)(argp2));
-    }
+    arg2 = PyInt_AsLong(obj1);
   }
   result = (int)gg_remove_notify(arg1,arg2);
   resultobj = SWIG_From_int((int)(result));
@@ -23482,7 +23254,9 @@ SWIGINTERN PyObject *_wrap_gg_pubdir50_next(PyObject *SWIGUNUSEDPARM(self), PyOb
   }
   arg1 = (gg_pubdir50_t)(argp1);
   result = gg_pubdir50_next(arg1);
-  resultobj = SWIG_NewPointerObj((uin_t *)memcpy((uin_t *)malloc(sizeof(uin_t)),&result,sizeof(uin_t)), SWIGTYPE_p_uint32_t, SWIG_POINTER_OWN |  0 );
+  {
+    resultobj = PyInt_FromLong(result);
+  }
   return resultobj;
 fail:
   return NULL;
@@ -23590,8 +23364,6 @@ SWIGINTERN PyObject *_wrap_gg_pubdir_uin_set(PyObject *SWIGUNUSEDPARM(self), PyO
   uin_t arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
   PyObject * obj0 = 0 ;
   PyObject * obj1 = 0 ;
   
@@ -23602,15 +23374,7 @@ SWIGINTERN PyObject *_wrap_gg_pubdir_uin_set(PyObject *SWIGUNUSEDPARM(self), PyO
   }
   arg1 = (struct gg_pubdir *)(argp1);
   {
-    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_uint32_t,  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "gg_pubdir_uin_set" "', argument " "2"" of type '" "uin_t""'"); 
-    }  
-    if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gg_pubdir_uin_set" "', argument " "2"" of type '" "uin_t""'");
-    } else {
-      arg2 = *((uin_t *)(argp2));
-    }
+    arg2 = PyInt_AsLong(obj1);
   }
   if (arg1) (arg1)->uin = arg2;
   resultobj = SWIG_Py_Void();
@@ -23635,7 +23399,9 @@ SWIGINTERN PyObject *_wrap_gg_pubdir_uin_get(PyObject *SWIGUNUSEDPARM(self), PyO
   }
   arg1 = (struct gg_pubdir *)(argp1);
   result =  ((arg1)->uin);
-  resultobj = SWIG_NewPointerObj((uin_t *)memcpy((uin_t *)malloc(sizeof(uin_t)),&result,sizeof(uin_t)), SWIGTYPE_p_uint32_t, SWIG_POINTER_OWN |  0 );
+  {
+    resultobj = PyInt_FromLong(result);
+  }
   return resultobj;
 fail:
   return NULL;
@@ -24104,8 +23870,6 @@ SWIGINTERN PyObject *_wrap_gg_unregister3(PyObject *SWIGUNUSEDPARM(self), PyObje
   char *arg3 = (char *) 0 ;
   char *arg4 = (char *) 0 ;
   int arg5 ;
-  void *argp1 ;
-  int res1 = 0 ;
   int res2 ;
   char *buf2 = 0 ;
   int alloc2 = 0 ;
@@ -24126,15 +23890,7 @@ SWIGINTERN PyObject *_wrap_gg_unregister3(PyObject *SWIGUNUSEDPARM(self), PyObje
   
   if (!PyArg_ParseTuple(args,(char *)"OOOOO:gg_unregister3",&obj0,&obj1,&obj2,&obj3,&obj4)) SWIG_fail;
   {
-    res1 = SWIG_ConvertPtr(obj0, &argp1, SWIGTYPE_p_uint32_t,  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "gg_unregister3" "', argument " "1"" of type '" "uin_t""'"); 
-    }  
-    if (!argp1) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gg_unregister3" "', argument " "1"" of type '" "uin_t""'");
-    } else {
-      arg1 = *((uin_t *)(argp1));
-    }
+    arg1 = PyInt_AsLong(obj0);
   }
   res2 = SWIG_AsCharPtrAndSize(obj1, &buf2, NULL, &alloc2);
   if (!SWIG_IsOK(res2)) {
@@ -24177,8 +23933,6 @@ SWIGINTERN PyObject *_wrap_gg_remind_passwd3(PyObject *SWIGUNUSEDPARM(self), PyO
   char *arg3 = (char *) 0 ;
   char *arg4 = (char *) 0 ;
   int arg5 ;
-  void *argp1 ;
-  int res1 = 0 ;
   int res2 ;
   char *buf2 = 0 ;
   int alloc2 = 0 ;
@@ -24199,15 +23953,7 @@ SWIGINTERN PyObject *_wrap_gg_remind_passwd3(PyObject *SWIGUNUSEDPARM(self), PyO
   
   if (!PyArg_ParseTuple(args,(char *)"OOOOO:gg_remind_passwd3",&obj0,&obj1,&obj2,&obj3,&obj4)) SWIG_fail;
   {
-    res1 = SWIG_ConvertPtr(obj0, &argp1, SWIGTYPE_p_uint32_t,  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "gg_remind_passwd3" "', argument " "1"" of type '" "uin_t""'"); 
-    }  
-    if (!argp1) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gg_remind_passwd3" "', argument " "1"" of type '" "uin_t""'");
-    } else {
-      arg1 = *((uin_t *)(argp1));
-    }
+    arg1 = PyInt_AsLong(obj0);
   }
   res2 = SWIG_AsCharPtrAndSize(obj1, &buf2, NULL, &alloc2);
   if (!SWIG_IsOK(res2)) {
@@ -24252,8 +23998,6 @@ SWIGINTERN PyObject *_wrap_gg_change_passwd4(PyObject *SWIGUNUSEDPARM(self), PyO
   char *arg5 = (char *) 0 ;
   char *arg6 = (char *) 0 ;
   int arg7 ;
-  void *argp1 ;
-  int res1 = 0 ;
   int res2 ;
   char *buf2 = 0 ;
   int alloc2 = 0 ;
@@ -24282,15 +24026,7 @@ SWIGINTERN PyObject *_wrap_gg_change_passwd4(PyObject *SWIGUNUSEDPARM(self), PyO
   
   if (!PyArg_ParseTuple(args,(char *)"OOOOOOO:gg_change_passwd4",&obj0,&obj1,&obj2,&obj3,&obj4,&obj5,&obj6)) SWIG_fail;
   {
-    res1 = SWIG_ConvertPtr(obj0, &argp1, SWIGTYPE_p_uint32_t,  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "gg_change_passwd4" "', argument " "1"" of type '" "uin_t""'"); 
-    }  
-    if (!argp1) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gg_change_passwd4" "', argument " "1"" of type '" "uin_t""'");
-    } else {
-      arg1 = *((uin_t *)(argp1));
-    }
+    arg1 = PyInt_AsLong(obj0);
   }
   res2 = SWIG_AsCharPtrAndSize(obj1, &buf2, NULL, &alloc2);
   if (!SWIG_IsOK(res2)) {
@@ -24392,8 +24128,6 @@ SWIGINTERN PyObject *_wrap_gg_dcc_request(PyObject *SWIGUNUSEDPARM(self), PyObje
   uin_t arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
   PyObject * obj0 = 0 ;
   PyObject * obj1 = 0 ;
   int result;
@@ -24405,15 +24139,7 @@ SWIGINTERN PyObject *_wrap_gg_dcc_request(PyObject *SWIGUNUSEDPARM(self), PyObje
   }
   arg1 = (struct gg_session *)(argp1);
   {
-    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_uint32_t,  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "gg_dcc_request" "', argument " "2"" of type '" "uin_t""'"); 
-    }  
-    if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gg_dcc_request" "', argument " "2"" of type '" "uin_t""'");
-    } else {
-      arg2 = *((uin_t *)(argp2));
-    }
+    arg2 = PyInt_AsLong(obj1);
   }
   result = (int)gg_dcc_request(arg1,arg2);
   resultobj = SWIG_From_int((int)(result));
@@ -24433,10 +24159,6 @@ SWIGINTERN PyObject *_wrap_gg_dcc_send_file(PyObject *SWIGUNUSEDPARM(self), PyOb
   int res1 = 0 ;
   void *argp2 ;
   int res2 = 0 ;
-  void *argp3 ;
-  int res3 = 0 ;
-  void *argp4 ;
-  int res4 = 0 ;
   PyObject * obj0 = 0 ;
   PyObject * obj1 = 0 ;
   PyObject * obj2 = 0 ;
@@ -24467,26 +24189,10 @@ SWIGINTERN PyObject *_wrap_gg_dcc_send_file(PyObject *SWIGUNUSEDPARM(self), PyOb
     }
   }
   {
-    res3 = SWIG_ConvertPtr(obj2, &argp3, SWIGTYPE_p_uint32_t,  0 );
-    if (!SWIG_IsOK(res3)) {
-      SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "gg_dcc_send_file" "', argument " "3"" of type '" "uin_t""'"); 
-    }  
-    if (!argp3) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gg_dcc_send_file" "', argument " "3"" of type '" "uin_t""'");
-    } else {
-      arg3 = *((uin_t *)(argp3));
-    }
+    arg3 = PyInt_AsLong(obj2);
   }
   {
-    res4 = SWIG_ConvertPtr(obj3, &argp4, SWIGTYPE_p_uint32_t,  0 );
-    if (!SWIG_IsOK(res4)) {
-      SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "gg_dcc_send_file" "', argument " "4"" of type '" "uin_t""'"); 
-    }  
-    if (!argp4) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gg_dcc_send_file" "', argument " "4"" of type '" "uin_t""'");
-    } else {
-      arg4 = *((uin_t *)(argp4));
-    }
+    arg4 = PyInt_AsLong(obj3);
   }
   result = (struct gg_dcc *)gg_dcc_send_file(arg1,arg2,arg3,arg4);
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_gg_dcc, 0 |  0 );
@@ -24506,10 +24212,6 @@ SWIGINTERN PyObject *_wrap_gg_dcc_get_file(PyObject *SWIGUNUSEDPARM(self), PyObj
   int res1 = 0 ;
   void *argp2 ;
   int res2 = 0 ;
-  void *argp3 ;
-  int res3 = 0 ;
-  void *argp4 ;
-  int res4 = 0 ;
   PyObject * obj0 = 0 ;
   PyObject * obj1 = 0 ;
   PyObject * obj2 = 0 ;
@@ -24540,26 +24242,10 @@ SWIGINTERN PyObject *_wrap_gg_dcc_get_file(PyObject *SWIGUNUSEDPARM(self), PyObj
     }
   }
   {
-    res3 = SWIG_ConvertPtr(obj2, &argp3, SWIGTYPE_p_uint32_t,  0 );
-    if (!SWIG_IsOK(res3)) {
-      SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "gg_dcc_get_file" "', argument " "3"" of type '" "uin_t""'"); 
-    }  
-    if (!argp3) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gg_dcc_get_file" "', argument " "3"" of type '" "uin_t""'");
-    } else {
-      arg3 = *((uin_t *)(argp3));
-    }
+    arg3 = PyInt_AsLong(obj2);
   }
   {
-    res4 = SWIG_ConvertPtr(obj3, &argp4, SWIGTYPE_p_uint32_t,  0 );
-    if (!SWIG_IsOK(res4)) {
-      SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "gg_dcc_get_file" "', argument " "4"" of type '" "uin_t""'"); 
-    }  
-    if (!argp4) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gg_dcc_get_file" "', argument " "4"" of type '" "uin_t""'");
-    } else {
-      arg4 = *((uin_t *)(argp4));
-    }
+    arg4 = PyInt_AsLong(obj3);
   }
   result = (struct gg_dcc *)gg_dcc_get_file(arg1,arg2,arg3,arg4);
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_gg_dcc, 0 |  0 );
@@ -24579,10 +24265,6 @@ SWIGINTERN PyObject *_wrap_gg_dcc_voice_chat(PyObject *SWIGUNUSEDPARM(self), PyO
   int res1 = 0 ;
   void *argp2 ;
   int res2 = 0 ;
-  void *argp3 ;
-  int res3 = 0 ;
-  void *argp4 ;
-  int res4 = 0 ;
   PyObject * obj0 = 0 ;
   PyObject * obj1 = 0 ;
   PyObject * obj2 = 0 ;
@@ -24613,26 +24295,10 @@ SWIGINTERN PyObject *_wrap_gg_dcc_voice_chat(PyObject *SWIGUNUSEDPARM(self), PyO
     }
   }
   {
-    res3 = SWIG_ConvertPtr(obj2, &argp3, SWIGTYPE_p_uint32_t,  0 );
-    if (!SWIG_IsOK(res3)) {
-      SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "gg_dcc_voice_chat" "', argument " "3"" of type '" "uin_t""'"); 
-    }  
-    if (!argp3) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gg_dcc_voice_chat" "', argument " "3"" of type '" "uin_t""'");
-    } else {
-      arg3 = *((uin_t *)(argp3));
-    }
+    arg3 = PyInt_AsLong(obj2);
   }
   {
-    res4 = SWIG_ConvertPtr(obj3, &argp4, SWIGTYPE_p_uint32_t,  0 );
-    if (!SWIG_IsOK(res4)) {
-      SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "gg_dcc_voice_chat" "', argument " "4"" of type '" "uin_t""'"); 
-    }  
-    if (!argp4) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gg_dcc_voice_chat" "', argument " "4"" of type '" "uin_t""'");
-    } else {
-      arg4 = *((uin_t *)(argp4));
-    }
+    arg4 = PyInt_AsLong(obj3);
   }
   result = (struct gg_dcc *)gg_dcc_voice_chat(arg1,arg2,arg3,arg4);
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_gg_dcc, 0 |  0 );
@@ -24799,8 +24465,6 @@ SWIGINTERN PyObject *_wrap_gg_dcc_socket_create(PyObject *SWIGUNUSEDPARM(self), 
   PyObject *resultobj = 0;
   uin_t arg1 ;
   uint16_t arg2 ;
-  void *argp1 ;
-  int res1 = 0 ;
   void *argp2 ;
   int res2 = 0 ;
   PyObject * obj0 = 0 ;
@@ -24809,15 +24473,7 @@ SWIGINTERN PyObject *_wrap_gg_dcc_socket_create(PyObject *SWIGUNUSEDPARM(self), 
   
   if (!PyArg_ParseTuple(args,(char *)"OO:gg_dcc_socket_create",&obj0,&obj1)) SWIG_fail;
   {
-    res1 = SWIG_ConvertPtr(obj0, &argp1, SWIGTYPE_p_uint32_t,  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "gg_dcc_socket_create" "', argument " "1"" of type '" "uin_t""'"); 
-    }  
-    if (!argp1) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gg_dcc_socket_create" "', argument " "1"" of type '" "uin_t""'");
-    } else {
-      arg1 = *((uin_t *)(argp1));
-    }
+    arg1 = PyInt_AsLong(obj0);
   }
   {
     res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_uint16_t,  0 );
@@ -24912,8 +24568,6 @@ SWIGINTERN PyObject *_wrap_gg_dcc7_send_file(PyObject *SWIGUNUSEDPARM(self), PyO
   char *arg5 = (char *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
   int res3 ;
   char *buf3 = 0 ;
   int alloc3 = 0 ;
@@ -24937,15 +24591,7 @@ SWIGINTERN PyObject *_wrap_gg_dcc7_send_file(PyObject *SWIGUNUSEDPARM(self), PyO
   }
   arg1 = (struct gg_session *)(argp1);
   {
-    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_uint32_t,  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "gg_dcc7_send_file" "', argument " "2"" of type '" "uin_t""'"); 
-    }  
-    if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gg_dcc7_send_file" "', argument " "2"" of type '" "uin_t""'");
-    } else {
-      arg2 = *((uin_t *)(argp2));
-    }
+    arg2 = PyInt_AsLong(obj1);
   }
   res3 = SWIG_AsCharPtrAndSize(obj2, &buf3, NULL, &alloc3);
   if (!SWIG_IsOK(res3)) {
@@ -24986,8 +24632,6 @@ SWIGINTERN PyObject *_wrap_gg_dcc7_send_file_fd(PyObject *SWIGUNUSEDPARM(self), 
   char *arg6 = (char *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
   int val3 ;
   int ecode3 = 0 ;
   size_t val4 ;
@@ -25013,15 +24657,7 @@ SWIGINTERN PyObject *_wrap_gg_dcc7_send_file_fd(PyObject *SWIGUNUSEDPARM(self), 
   }
   arg1 = (struct gg_session *)(argp1);
   {
-    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_uint32_t,  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "gg_dcc7_send_file_fd" "', argument " "2"" of type '" "uin_t""'"); 
-    }  
-    if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gg_dcc7_send_file_fd" "', argument " "2"" of type '" "uin_t""'");
-    } else {
-      arg2 = *((uin_t *)(argp2));
-    }
+    arg2 = PyInt_AsLong(obj1);
   }
   ecode3 = SWIG_AsVal_int(obj2, &val3);
   if (!SWIG_IsOK(ecode3)) {
@@ -26174,8 +25810,6 @@ SWIGINTERN PyObject *_wrap_gg_search_request_uin_set(PyObject *SWIGUNUSEDPARM(se
   uin_t arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
   PyObject * obj0 = 0 ;
   PyObject * obj1 = 0 ;
   
@@ -26186,15 +25820,7 @@ SWIGINTERN PyObject *_wrap_gg_search_request_uin_set(PyObject *SWIGUNUSEDPARM(se
   }
   arg1 = (struct gg_search_request *)(argp1);
   {
-    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_uint32_t,  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "gg_search_request_uin_set" "', argument " "2"" of type '" "uin_t""'"); 
-    }  
-    if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gg_search_request_uin_set" "', argument " "2"" of type '" "uin_t""'");
-    } else {
-      arg2 = *((uin_t *)(argp2));
-    }
+    arg2 = PyInt_AsLong(obj1);
   }
   if (arg1) (arg1)->uin = arg2;
   resultobj = SWIG_Py_Void();
@@ -26219,7 +25845,9 @@ SWIGINTERN PyObject *_wrap_gg_search_request_uin_get(PyObject *SWIGUNUSEDPARM(se
   }
   arg1 = (struct gg_search_request *)(argp1);
   result =  ((arg1)->uin);
-  resultobj = SWIG_NewPointerObj((uin_t *)memcpy((uin_t *)malloc(sizeof(uin_t)),&result,sizeof(uin_t)), SWIGTYPE_p_uint32_t, SWIG_POINTER_OWN |  0 );
+  {
+    resultobj = PyInt_FromLong(result);
+  }
   return resultobj;
 fail:
   return NULL;
@@ -26418,8 +26046,6 @@ SWIGINTERN PyObject *_wrap_gg_search_result_uin_set(PyObject *SWIGUNUSEDPARM(sel
   uin_t arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
   PyObject * obj0 = 0 ;
   PyObject * obj1 = 0 ;
   
@@ -26430,15 +26056,7 @@ SWIGINTERN PyObject *_wrap_gg_search_result_uin_set(PyObject *SWIGUNUSEDPARM(sel
   }
   arg1 = (struct gg_search_result *)(argp1);
   {
-    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_uint32_t,  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "gg_search_result_uin_set" "', argument " "2"" of type '" "uin_t""'"); 
-    }  
-    if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gg_search_result_uin_set" "', argument " "2"" of type '" "uin_t""'");
-    } else {
-      arg2 = *((uin_t *)(argp2));
-    }
+    arg2 = PyInt_AsLong(obj1);
   }
   if (arg1) (arg1)->uin = arg2;
   resultobj = SWIG_Py_Void();
@@ -26463,7 +26081,9 @@ SWIGINTERN PyObject *_wrap_gg_search_result_uin_get(PyObject *SWIGUNUSEDPARM(sel
   }
   arg1 = (struct gg_search_result *)(argp1);
   result =  ((arg1)->uin);
-  resultobj = SWIG_NewPointerObj((uin_t *)memcpy((uin_t *)malloc(sizeof(uin_t)),&result,sizeof(uin_t)), SWIGTYPE_p_uint32_t, SWIG_POINTER_OWN |  0 );
+  {
+    resultobj = PyInt_FromLong(result);
+  }
   return resultobj;
 fail:
   return NULL;
@@ -27151,8 +26771,6 @@ SWIGINTERN PyObject *_wrap_gg_search_request_mode_3(PyObject *SWIGUNUSEDPARM(sel
   uin_t arg1 ;
   int arg2 ;
   int arg3 ;
-  void *argp1 ;
-  int res1 = 0 ;
   int val2 ;
   int ecode2 = 0 ;
   int val3 ;
@@ -27164,15 +26782,7 @@ SWIGINTERN PyObject *_wrap_gg_search_request_mode_3(PyObject *SWIGUNUSEDPARM(sel
   
   if (!PyArg_ParseTuple(args,(char *)"OOO:gg_search_request_mode_3",&obj0,&obj1,&obj2)) SWIG_fail;
   {
-    res1 = SWIG_ConvertPtr(obj0, &argp1, SWIGTYPE_p_uint32_t,  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "gg_search_request_mode_3" "', argument " "1"" of type '" "uin_t""'"); 
-    }  
-    if (!argp1) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gg_search_request_mode_3" "', argument " "1"" of type '" "uin_t""'");
-    } else {
-      arg1 = *((uin_t *)(argp1));
-    }
+    arg1 = PyInt_AsLong(obj0);
   }
   ecode2 = SWIG_AsVal_int(obj1, &val2);
   if (!SWIG_IsOK(ecode2)) {
@@ -27323,8 +26933,6 @@ SWIGINTERN PyObject *_wrap_gg_unregister(PyObject *SWIGUNUSEDPARM(self), PyObjec
   char *arg2 = (char *) 0 ;
   char *arg3 = (char *) 0 ;
   int arg4 ;
-  void *argp1 ;
-  int res1 = 0 ;
   int res2 ;
   char *buf2 = 0 ;
   int alloc2 = 0 ;
@@ -27341,15 +26949,7 @@ SWIGINTERN PyObject *_wrap_gg_unregister(PyObject *SWIGUNUSEDPARM(self), PyObjec
   
   if (!PyArg_ParseTuple(args,(char *)"OOOO:gg_unregister",&obj0,&obj1,&obj2,&obj3)) SWIG_fail;
   {
-    res1 = SWIG_ConvertPtr(obj0, &argp1, SWIGTYPE_p_uint32_t,  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "gg_unregister" "', argument " "1"" of type '" "uin_t""'"); 
-    }  
-    if (!argp1) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gg_unregister" "', argument " "1"" of type '" "uin_t""'");
-    } else {
-      arg1 = *((uin_t *)(argp1));
-    }
+    arg1 = PyInt_AsLong(obj0);
   }
   res2 = SWIG_AsCharPtrAndSize(obj1, &buf2, NULL, &alloc2);
   if (!SWIG_IsOK(res2)) {
@@ -27384,8 +26984,6 @@ SWIGINTERN PyObject *_wrap_gg_unregister2(PyObject *SWIGUNUSEDPARM(self), PyObje
   char *arg2 = (char *) 0 ;
   char *arg3 = (char *) 0 ;
   int arg4 ;
-  void *argp1 ;
-  int res1 = 0 ;
   int res2 ;
   char *buf2 = 0 ;
   int alloc2 = 0 ;
@@ -27402,15 +27000,7 @@ SWIGINTERN PyObject *_wrap_gg_unregister2(PyObject *SWIGUNUSEDPARM(self), PyObje
   
   if (!PyArg_ParseTuple(args,(char *)"OOOO:gg_unregister2",&obj0,&obj1,&obj2,&obj3)) SWIG_fail;
   {
-    res1 = SWIG_ConvertPtr(obj0, &argp1, SWIGTYPE_p_uint32_t,  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "gg_unregister2" "', argument " "1"" of type '" "uin_t""'"); 
-    }  
-    if (!argp1) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gg_unregister2" "', argument " "1"" of type '" "uin_t""'");
-    } else {
-      arg1 = *((uin_t *)(argp1));
-    }
+    arg1 = PyInt_AsLong(obj0);
   }
   res2 = SWIG_AsCharPtrAndSize(obj1, &buf2, NULL, &alloc2);
   if (!SWIG_IsOK(res2)) {
@@ -27443,8 +27033,6 @@ SWIGINTERN PyObject *_wrap_gg_remind_passwd(PyObject *SWIGUNUSEDPARM(self), PyOb
   PyObject *resultobj = 0;
   uin_t arg1 ;
   int arg2 ;
-  void *argp1 ;
-  int res1 = 0 ;
   int val2 ;
   int ecode2 = 0 ;
   PyObject * obj0 = 0 ;
@@ -27453,15 +27041,7 @@ SWIGINTERN PyObject *_wrap_gg_remind_passwd(PyObject *SWIGUNUSEDPARM(self), PyOb
   
   if (!PyArg_ParseTuple(args,(char *)"OO:gg_remind_passwd",&obj0,&obj1)) SWIG_fail;
   {
-    res1 = SWIG_ConvertPtr(obj0, &argp1, SWIGTYPE_p_uint32_t,  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "gg_remind_passwd" "', argument " "1"" of type '" "uin_t""'"); 
-    }  
-    if (!argp1) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gg_remind_passwd" "', argument " "1"" of type '" "uin_t""'");
-    } else {
-      arg1 = *((uin_t *)(argp1));
-    }
+    arg1 = PyInt_AsLong(obj0);
   }
   ecode2 = SWIG_AsVal_int(obj1, &val2);
   if (!SWIG_IsOK(ecode2)) {
@@ -27482,8 +27062,6 @@ SWIGINTERN PyObject *_wrap_gg_remind_passwd2(PyObject *SWIGUNUSEDPARM(self), PyO
   char *arg2 = (char *) 0 ;
   char *arg3 = (char *) 0 ;
   int arg4 ;
-  void *argp1 ;
-  int res1 = 0 ;
   int res2 ;
   char *buf2 = 0 ;
   int alloc2 = 0 ;
@@ -27500,15 +27078,7 @@ SWIGINTERN PyObject *_wrap_gg_remind_passwd2(PyObject *SWIGUNUSEDPARM(self), PyO
   
   if (!PyArg_ParseTuple(args,(char *)"OOOO:gg_remind_passwd2",&obj0,&obj1,&obj2,&obj3)) SWIG_fail;
   {
-    res1 = SWIG_ConvertPtr(obj0, &argp1, SWIGTYPE_p_uint32_t,  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "gg_remind_passwd2" "', argument " "1"" of type '" "uin_t""'"); 
-    }  
-    if (!argp1) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gg_remind_passwd2" "', argument " "1"" of type '" "uin_t""'");
-    } else {
-      arg1 = *((uin_t *)(argp1));
-    }
+    arg1 = PyInt_AsLong(obj0);
   }
   res2 = SWIG_AsCharPtrAndSize(obj1, &buf2, NULL, &alloc2);
   if (!SWIG_IsOK(res2)) {
@@ -27544,8 +27114,6 @@ SWIGINTERN PyObject *_wrap_gg_change_passwd(PyObject *SWIGUNUSEDPARM(self), PyOb
   char *arg3 = (char *) 0 ;
   char *arg4 = (char *) 0 ;
   int arg5 ;
-  void *argp1 ;
-  int res1 = 0 ;
   int res2 ;
   char *buf2 = 0 ;
   int alloc2 = 0 ;
@@ -27566,15 +27134,7 @@ SWIGINTERN PyObject *_wrap_gg_change_passwd(PyObject *SWIGUNUSEDPARM(self), PyOb
   
   if (!PyArg_ParseTuple(args,(char *)"OOOOO:gg_change_passwd",&obj0,&obj1,&obj2,&obj3,&obj4)) SWIG_fail;
   {
-    res1 = SWIG_ConvertPtr(obj0, &argp1, SWIGTYPE_p_uint32_t,  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "gg_change_passwd" "', argument " "1"" of type '" "uin_t""'"); 
-    }  
-    if (!argp1) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gg_change_passwd" "', argument " "1"" of type '" "uin_t""'");
-    } else {
-      arg1 = *((uin_t *)(argp1));
-    }
+    arg1 = PyInt_AsLong(obj0);
   }
   res2 = SWIG_AsCharPtrAndSize(obj1, &buf2, NULL, &alloc2);
   if (!SWIG_IsOK(res2)) {
@@ -27618,8 +27178,6 @@ SWIGINTERN PyObject *_wrap_gg_change_passwd2(PyObject *SWIGUNUSEDPARM(self), PyO
   char *arg4 = (char *) 0 ;
   char *arg5 = (char *) 0 ;
   int arg6 ;
-  void *argp1 ;
-  int res1 = 0 ;
   int res2 ;
   char *buf2 = 0 ;
   int alloc2 = 0 ;
@@ -27644,15 +27202,7 @@ SWIGINTERN PyObject *_wrap_gg_change_passwd2(PyObject *SWIGUNUSEDPARM(self), PyO
   
   if (!PyArg_ParseTuple(args,(char *)"OOOOOO:gg_change_passwd2",&obj0,&obj1,&obj2,&obj3,&obj4,&obj5)) SWIG_fail;
   {
-    res1 = SWIG_ConvertPtr(obj0, &argp1, SWIGTYPE_p_uint32_t,  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "gg_change_passwd2" "', argument " "1"" of type '" "uin_t""'"); 
-    }  
-    if (!argp1) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gg_change_passwd2" "', argument " "1"" of type '" "uin_t""'");
-    } else {
-      arg1 = *((uin_t *)(argp1));
-    }
+    arg1 = PyInt_AsLong(obj0);
   }
   res2 = SWIG_AsCharPtrAndSize(obj1, &buf2, NULL, &alloc2);
   if (!SWIG_IsOK(res2)) {
@@ -27702,8 +27252,6 @@ SWIGINTERN PyObject *_wrap_gg_change_passwd3(PyObject *SWIGUNUSEDPARM(self), PyO
   char *arg3 = (char *) 0 ;
   char *arg4 = (char *) 0 ;
   int arg5 ;
-  void *argp1 ;
-  int res1 = 0 ;
   int res2 ;
   char *buf2 = 0 ;
   int alloc2 = 0 ;
@@ -27724,15 +27272,7 @@ SWIGINTERN PyObject *_wrap_gg_change_passwd3(PyObject *SWIGUNUSEDPARM(self), PyO
   
   if (!PyArg_ParseTuple(args,(char *)"OOOOO:gg_change_passwd3",&obj0,&obj1,&obj2,&obj3,&obj4)) SWIG_fail;
   {
-    res1 = SWIG_ConvertPtr(obj0, &argp1, SWIGTYPE_p_uint32_t,  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "gg_change_passwd3" "', argument " "1"" of type '" "uin_t""'"); 
-    }  
-    if (!argp1) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gg_change_passwd3" "', argument " "1"" of type '" "uin_t""'");
-    } else {
-      arg1 = *((uin_t *)(argp1));
-    }
+    arg1 = PyInt_AsLong(obj0);
   }
   res2 = SWIG_AsCharPtrAndSize(obj1, &buf2, NULL, &alloc2);
   if (!SWIG_IsOK(res2)) {
@@ -28336,8 +27876,6 @@ SWIGINTERN PyObject *_wrap_gg_change_info(PyObject *SWIGUNUSEDPARM(self), PyObje
   char *arg2 = (char *) 0 ;
   struct gg_change_info_request *arg3 = (struct gg_change_info_request *) 0 ;
   int arg4 ;
-  void *argp1 ;
-  int res1 = 0 ;
   int res2 ;
   char *buf2 = 0 ;
   int alloc2 = 0 ;
@@ -28353,15 +27891,7 @@ SWIGINTERN PyObject *_wrap_gg_change_info(PyObject *SWIGUNUSEDPARM(self), PyObje
   
   if (!PyArg_ParseTuple(args,(char *)"OOOO:gg_change_info",&obj0,&obj1,&obj2,&obj3)) SWIG_fail;
   {
-    res1 = SWIG_ConvertPtr(obj0, &argp1, SWIGTYPE_p_uint32_t,  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "gg_change_info" "', argument " "1"" of type '" "uin_t""'"); 
-    }  
-    if (!argp1) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gg_change_info" "', argument " "1"" of type '" "uin_t""'");
-    } else {
-      arg1 = *((uin_t *)(argp1));
-    }
+    arg1 = PyInt_AsLong(obj0);
   }
   res2 = SWIG_AsCharPtrAndSize(obj1, &buf2, NULL, &alloc2);
   if (!SWIG_IsOK(res2)) {
@@ -28393,8 +27923,6 @@ SWIGINTERN PyObject *_wrap_gg_userlist_get(PyObject *SWIGUNUSEDPARM(self), PyObj
   uin_t arg1 ;
   char *arg2 = (char *) 0 ;
   int arg3 ;
-  void *argp1 ;
-  int res1 = 0 ;
   int res2 ;
   char *buf2 = 0 ;
   int alloc2 = 0 ;
@@ -28407,15 +27935,7 @@ SWIGINTERN PyObject *_wrap_gg_userlist_get(PyObject *SWIGUNUSEDPARM(self), PyObj
   
   if (!PyArg_ParseTuple(args,(char *)"OOO:gg_userlist_get",&obj0,&obj1,&obj2)) SWIG_fail;
   {
-    res1 = SWIG_ConvertPtr(obj0, &argp1, SWIGTYPE_p_uint32_t,  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "gg_userlist_get" "', argument " "1"" of type '" "uin_t""'"); 
-    }  
-    if (!argp1) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gg_userlist_get" "', argument " "1"" of type '" "uin_t""'");
-    } else {
-      arg1 = *((uin_t *)(argp1));
-    }
+    arg1 = PyInt_AsLong(obj0);
   }
   res2 = SWIG_AsCharPtrAndSize(obj1, &buf2, NULL, &alloc2);
   if (!SWIG_IsOK(res2)) {
@@ -28486,8 +28006,6 @@ SWIGINTERN PyObject *_wrap_gg_userlist_put(PyObject *SWIGUNUSEDPARM(self), PyObj
   char *arg2 = (char *) 0 ;
   char *arg3 = (char *) 0 ;
   int arg4 ;
-  void *argp1 ;
-  int res1 = 0 ;
   int res2 ;
   char *buf2 = 0 ;
   int alloc2 = 0 ;
@@ -28504,15 +28022,7 @@ SWIGINTERN PyObject *_wrap_gg_userlist_put(PyObject *SWIGUNUSEDPARM(self), PyObj
   
   if (!PyArg_ParseTuple(args,(char *)"OOOO:gg_userlist_put",&obj0,&obj1,&obj2,&obj3)) SWIG_fail;
   {
-    res1 = SWIG_ConvertPtr(obj0, &argp1, SWIGTYPE_p_uint32_t,  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "gg_userlist_put" "', argument " "1"" of type '" "uin_t""'"); 
-    }  
-    if (!argp1) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gg_userlist_put" "', argument " "1"" of type '" "uin_t""'");
-    } else {
-      arg1 = *((uin_t *)(argp1));
-    }
+    arg1 = PyInt_AsLong(obj0);
   }
   res2 = SWIG_AsCharPtrAndSize(obj1, &buf2, NULL, &alloc2);
   if (!SWIG_IsOK(res2)) {
@@ -28589,8 +28099,6 @@ SWIGINTERN PyObject *_wrap_gg_userlist_remove(PyObject *SWIGUNUSEDPARM(self), Py
   uin_t arg1 ;
   char *arg2 = (char *) 0 ;
   int arg3 ;
-  void *argp1 ;
-  int res1 = 0 ;
   int res2 ;
   char *buf2 = 0 ;
   int alloc2 = 0 ;
@@ -28603,15 +28111,7 @@ SWIGINTERN PyObject *_wrap_gg_userlist_remove(PyObject *SWIGUNUSEDPARM(self), Py
   
   if (!PyArg_ParseTuple(args,(char *)"OOO:gg_userlist_remove",&obj0,&obj1,&obj2)) SWIG_fail;
   {
-    res1 = SWIG_ConvertPtr(obj0, &argp1, SWIGTYPE_p_uint32_t,  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "gg_userlist_remove" "', argument " "1"" of type '" "uin_t""'"); 
-    }  
-    if (!argp1) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gg_userlist_remove" "', argument " "1"" of type '" "uin_t""'");
-    } else {
-      arg1 = *((uin_t *)(argp1));
-    }
+    arg1 = PyInt_AsLong(obj0);
   }
   res2 = SWIG_AsCharPtrAndSize(obj1, &buf2, NULL, &alloc2);
   if (!SWIG_IsOK(res2)) {
@@ -29456,8 +28956,6 @@ SWIGINTERN PyObject *_wrap_gg_image_queue_sender_set(PyObject *SWIGUNUSEDPARM(se
   uin_t arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
   PyObject * obj0 = 0 ;
   PyObject * obj1 = 0 ;
   
@@ -29468,15 +28966,7 @@ SWIGINTERN PyObject *_wrap_gg_image_queue_sender_set(PyObject *SWIGUNUSEDPARM(se
   }
   arg1 = (struct gg_image_queue *)(argp1);
   {
-    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_uint32_t,  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "gg_image_queue_sender_set" "', argument " "2"" of type '" "uin_t""'"); 
-    }  
-    if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gg_image_queue_sender_set" "', argument " "2"" of type '" "uin_t""'");
-    } else {
-      arg2 = *((uin_t *)(argp2));
-    }
+    arg2 = PyInt_AsLong(obj1);
   }
   if (arg1) (arg1)->sender = arg2;
   resultobj = SWIG_Py_Void();
@@ -29501,7 +28991,9 @@ SWIGINTERN PyObject *_wrap_gg_image_queue_sender_get(PyObject *SWIGUNUSEDPARM(se
   }
   arg1 = (struct gg_image_queue *)(argp1);
   result =  ((arg1)->sender);
-  resultobj = SWIG_NewPointerObj((uin_t *)memcpy((uin_t *)malloc(sizeof(uin_t)),&result,sizeof(uin_t)), SWIGTYPE_p_uint32_t, SWIG_POINTER_OWN |  0 );
+  {
+    resultobj = PyInt_FromLong(result);
+  }
   return resultobj;
 fail:
   return NULL;

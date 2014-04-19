@@ -15,7 +15,7 @@ setup(name='libgadu',
        version='1.11.3',
        author=u"Michał Papierski",
        author_email='michal@papierski.net',
-       description="""Twisted libgadu wrapper""",
+       description="""Python libgadu wrapper""",
        ext_modules=[libgadu_module],
        py_modules=["libgadu"],
        )

@@ -39,6 +39,14 @@
 	}
 }
 
+// Special case for sending message: Convert unsigned char * to char *.
+%rename(gg_send_message) wrap_gg_send_message;
+%inline %{
+int wrap_gg_send_message(struct gg_session *sess, int msgclass, unsigned int recipient, const char *message)
+{
+	return gg_send_message(sess, msgclass, recipient, (const unsigned char *)message);
+}
+%}
 
 %include "libgadu.h"
 

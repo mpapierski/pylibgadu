@@ -22767,7 +22767,14 @@ SWIGINTERN PyObject *_wrap_gg_watch_fd(PyObject *SWIGUNUSEDPARM(self), PyObject 
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "gg_watch_fd" "', argument " "1"" of type '" "struct gg_session *""'"); 
   }
   arg1 = (struct gg_session *)(argp1);
-  result = (struct gg_event *)gg_watch_fd(arg1);
+  {
+    result = (struct gg_event *)gg_watch_fd(arg1);
+    if (result == -1) {
+      gg_free_session(arg1);
+      PyErr_SetFromErrno(PyExc_IOError);
+      return NULL;
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_gg_event, 0 |  0 );
   return resultobj;
 fail:

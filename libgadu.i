@@ -58,5 +58,15 @@ int wrap_gg_send_message(struct gg_session *sess, int msgclass, unsigned int rec
 	}
 }
 
+// Raise exception from wrapped gg_watch_fd function
+%exception gg_watch_fd {
+	$action
+	if (result == -1) {
+		gg_free_session(arg1);
+		PyErr_SetFromErrno(PyExc_IOError);
+		return NULL;
+	}
+}
+
 %include "libgadu.h"
 

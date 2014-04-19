@@ -31,19 +31,17 @@ def main():
 	sys.stdout.write('delivery_code={}\n'.format(delivery_code))
 
 	while True:
-		e = libgadu.gg_watch_fd(sess)
-		if e is None:
-			sys.stdout.write("Połączenie przerwane: {}\n".format('errno'))
+		try:
+			e = libgadu.gg_watch_fd(sess)
+			if e.type == libgadu.GG_EVENT_ACK:
+				sys.stdout.write("Wysłano.\n")
+				break
+		except IOError as e:
 			libgadu.gg_logoff(sess)
 			libgadu.gg_free_session(sess)
-			sys.exit(1)
-
-		if e.type == libgadu.GG_EVENT_ACK:
-			sys.stdout.write("Wysłano.\n")
+			raise
+		finally:
 			libgadu.gg_free_event(e)
-			break
-
-		libgadu.gg_free_event(e)
 
 	libgadu.gg_logoff(sess)
 	libgadu.gg_free_session(sess)

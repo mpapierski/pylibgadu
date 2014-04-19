@@ -21,25 +21,14 @@ def main():
 	p = libgadu.gg_login_params()
 	p.uin = int(sys.argv[1])
 	p.password = sys.argv[2]
-	try:
-		sess = libgadu.gg_login(p)
-	except IOError as e:
-		sys.stderr.write("Nie udało się połączyć: {}\n".format(e.strerror))
-		sys.exit(1)
 
+	sess = libgadu.gg_login(p)
 	sys.stdout.write("Połączono.\n")
-
+	
 	# serwery gg nie pozwalaja wysylac wiadomosci bez powiadomienia o userliscie (przetestowane p.protocol_version [0x15; def])
-	try:
-		libgadu.gg_notify(sess, None, 0)
-	except IOError as e:
-		sys.stdout.write("Połączenie przerwane: {}\n".format(e.strerror))
-		sys.exit(1)
-
-	if libgadu.gg_send_message(sess, libgadu.GG_CLASS_MSG, int(sys.argv[3]), sys.argv[4]) == -1:
-		sys.stdout.write("Połączenie przerwane: {}\n".format('errno'))
-		libgadu.gg_free_session(sess)
-		sys.exit(1)
+	libgadu.gg_notify(sess, None, 0)
+	delivery_code = libgadu.gg_send_message(sess, libgadu.GG_CLASS_MSG, int(sys.argv[3]), sys.argv[4])
+	sys.stdout.write('delivery_code={}\n'.format(delivery_code))
 
 	while True:
 		e = libgadu.gg_watch_fd(sess)
@@ -60,4 +49,8 @@ def main():
 	libgadu.gg_free_session(sess)
 
 if __name__ == '__main__':
-	main()
+	try:
+		main()
+	except IOError as e:
+		sys.stdout.write("Połączenie przerwane: {}\n".format(e.strerror))
+		raise

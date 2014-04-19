@@ -1830,9 +1830,9 @@ def gg_watch_fd(*args):
   return _libgadu.gg_watch_fd(*args)
 gg_watch_fd = _libgadu.gg_watch_fd
 
-def gg_event_free(*args):
-  return _libgadu.gg_event_free(*args)
-gg_event_free = _libgadu.gg_event_free
+def gg_free_event(*args):
+  return _libgadu.gg_free_event(*args)
+gg_free_event = _libgadu.gg_free_event
 
 def gg_notify_ex(*args):
   return _libgadu.gg_notify_ex(*args)

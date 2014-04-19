@@ -22634,17 +22634,17 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_gg_event_free(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_gg_free_event(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   struct gg_event *arg1 = (struct gg_event *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
   
-  if (!PyArg_ParseTuple(args,(char *)"O:gg_event_free",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"O:gg_free_event",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_gg_event, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "gg_event_free" "', argument " "1"" of type '" "struct gg_event *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "gg_free_event" "', argument " "1"" of type '" "struct gg_event *""'"); 
   }
   arg1 = (struct gg_event *)(argp1);
   gg_event_free(arg1);
@@ -39242,7 +39242,7 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"delete_gg_event", _wrap_delete_gg_event, METH_VARARGS, NULL},
 	 { (char *)"gg_event_swigregister", gg_event_swigregister, METH_VARARGS, NULL},
 	 { (char *)"gg_watch_fd", _wrap_gg_watch_fd, METH_VARARGS, NULL},
-	 { (char *)"gg_event_free", _wrap_gg_event_free, METH_VARARGS, NULL},
+	 { (char *)"gg_free_event", _wrap_gg_free_event, METH_VARARGS, NULL},
 	 { (char *)"gg_notify_ex", _wrap_gg_notify_ex, METH_VARARGS, NULL},
 	 { (char *)"gg_notify", _wrap_gg_notify, METH_VARARGS, NULL},
 	 { (char *)"gg_add_notify_ex", _wrap_gg_add_notify_ex, METH_VARARGS, NULL},

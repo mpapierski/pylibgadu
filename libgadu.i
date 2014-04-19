@@ -17,4 +17,7 @@
   $result = PyInt_FromLong($1);
 }
 
+// gg_event_free is really gg_free_event
+%rename(gg_free_event) gg_event_free(struct gg_event *);
+
 %include "/usr/local/include/libgadu.h"

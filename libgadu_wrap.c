@@ -3053,7 +3053,7 @@ static swig_module_info swig_module = {swig_types, 110, 0, 0, 0, 0};
 #define SWIG_as_voidptrptr(a) ((void)SWIG_as_voidptr(*a),(void**)(a)) 
 
 
-#include "/usr/local/include/libgadu.h"
+#include "libgadu.h"
 
 
 #include <limits.h>

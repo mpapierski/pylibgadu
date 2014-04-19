@@ -13886,7 +13886,13 @@ SWIGINTERN PyObject *_wrap_gg_login(PyObject *SWIGUNUSEDPARM(self), PyObject *ar
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "gg_login" "', argument " "1"" of type '" "struct gg_login_params const *""'"); 
   }
   arg1 = (struct gg_login_params *)(argp1);
-  result = (struct gg_session *)gg_login((struct gg_login_params const *)arg1);
+  {
+    result = (struct gg_session *)gg_login((struct gg_login_params const *)arg1);
+    if (!result) {
+      PyErr_SetFromErrno(PyExc_IOError);
+      return NULL;
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_gg_session, 0 |  0 );
   return resultobj;
 fail:

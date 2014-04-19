@@ -20,4 +20,14 @@
 // gg_event_free is really gg_free_event
 %rename(gg_free_event) gg_event_free(struct gg_event *);
 
+// Raise exception from gg_login function
+%exception gg_login {
+	$action
+	if (!result) {
+		PyErr_SetFromErrno(PyExc_IOError);
+		return NULL;
+	}
+}
+
 %include "libgadu.h"
+

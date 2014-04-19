@@ -28797,8 +28797,6 @@ SWIGINTERN PyObject *_wrap_gg_vsaprintf(PyObject *SWIGUNUSEDPARM(self), PyObject
   int res1 ;
   char *buf1 = 0 ;
   int alloc1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
   PyObject * obj0 = 0 ;
   PyObject * obj1 = 0 ;
   char *result = 0 ;
@@ -28810,15 +28808,7 @@ SWIGINTERN PyObject *_wrap_gg_vsaprintf(PyObject *SWIGUNUSEDPARM(self), PyObject
   }
   arg1 = (char *)(buf1);
   {
-    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_va_list,  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "gg_vsaprintf" "', argument " "2"" of type '" "va_list""'"); 
-    }  
-    if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gg_vsaprintf" "', argument " "2"" of type '" "va_list""'");
-    } else {
-      arg2 = *((va_list *)(argp2));
-    }
+    // XXX: This is special workaround for function gg_vsaprint
   }
   result = (char *)gg_vsaprintf((char const *)arg1,arg2);
   resultobj = SWIG_FromCharPtr((const char *)result);

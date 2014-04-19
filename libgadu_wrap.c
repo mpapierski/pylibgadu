@@ -14194,7 +14194,14 @@ SWIGINTERN PyObject *_wrap_gg_send_message__SWIG_1(PyObject *SWIGUNUSEDPARM(self
     SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "gg_send_message" "', argument " "4"" of type '" "unsigned char const *""'"); 
   }
   arg4 = (unsigned char *)(argp4);
-  result = (int)gg_send_message(arg1,arg2,arg3,(unsigned char const *)arg4);
+  {
+    result = (int)gg_send_message(arg1,arg2,arg3,(unsigned char const *)arg4);
+    if (result == -1) {
+      gg_free_session(arg1);
+      PyErr_SetFromErrno(PyExc_IOError);
+      return NULL;
+    }
+  }
   resultobj = SWIG_From_int((int)(result));
   return resultobj;
 fail:

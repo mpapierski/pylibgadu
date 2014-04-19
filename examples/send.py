@@ -30,9 +30,10 @@ def main():
 	sys.stdout.write("Połączono.\n")
 
 	# serwery gg nie pozwalaja wysylac wiadomosci bez powiadomienia o userliscie (przetestowane p.protocol_version [0x15; def])
-	if libgadu.gg_notify(sess, None, 0) == -1:
-		sys.stdout.write("Połączenie przerwane: {}\n".format('errno'))
-		libgadu.gg_free_session(sess)
+	try:
+		libgadu.gg_notify(sess, None, 0)
+	except IOError as e:
+		sys.stdout.write("Połączenie przerwane: {}\n".format(e.strerror))
 		sys.exit(1)
 
 	if libgadu.gg_send_message(sess, libgadu.GG_CLASS_MSG, int(sys.argv[3]), sys.argv[4]) == -1:

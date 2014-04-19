@@ -22745,7 +22745,14 @@ SWIGINTERN PyObject *_wrap_gg_notify(PyObject *SWIGUNUSEDPARM(self), PyObject *a
     SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "gg_notify" "', argument " "3"" of type '" "int""'");
   } 
   arg3 = (int)(val3);
-  result = (int)gg_notify(arg1,arg2,arg3);
+  {
+    result = (int)gg_notify(arg1,arg2,arg3);
+    if (result == -1) {
+      gg_free_session(arg1);
+      PyErr_SetFromErrno(PyExc_IOError);
+      return NULL;
+    }
+  }
   resultobj = SWIG_From_int((int)(result));
   return resultobj;
 fail:

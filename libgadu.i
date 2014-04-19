@@ -29,5 +29,16 @@
 	}
 }
 
+// Raise exception from gg_login function
+%exception gg_notify {
+	$action
+	if (result == -1) {
+		gg_free_session(arg1);
+		PyErr_SetFromErrno(PyExc_IOError);
+		return NULL;
+	}
+}
+
+
 %include "libgadu.h"
 

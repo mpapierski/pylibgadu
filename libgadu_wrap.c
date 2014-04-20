@@ -15909,7 +15909,7 @@ SWIGINTERN PyObject *_wrap_gg_event_msg_message_get(PyObject *SWIGUNUSEDPARM(sel
   }
   arg1 = (struct gg_event_msg *)(argp1);
   result = (unsigned char *) ((arg1)->message);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_unsigned_char, 0 |  0 );
+  resultobj = SWIG_FromCharPtr((const char *)result);
   return resultobj;
 fail:
   return NULL;

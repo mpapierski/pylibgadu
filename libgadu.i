@@ -92,5 +92,8 @@ int wrap_gg_send_message(struct gg_session *sess, int msgclass, unsigned int rec
    if ($1) free($1);
 }
 
+// Converts unsigned char * getters. This fixes gg_event_msg::message.
+%typemap(out) unsigned char* = char*;
+
 %include "libgadu.h"
 

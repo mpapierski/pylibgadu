@@ -1,8 +1,15 @@
 %module libgadu
 
 %{
+// Headers
+#include "datetime.h" // PyDateTime_FromTimestamp
 #include "libgadu.h"
 %}
+
+%init %{
+	PyDateTime_IMPORT;
+%}
+
 
 %typemap(in) va_list {
   // XXX: This is special workaround for function gg_vsaprint
@@ -94,6 +101,23 @@ int wrap_gg_send_message(struct gg_session *sess, int msgclass, unsigned int rec
 
 // Converts unsigned char * getters. This fixes gg_event_msg::message.
 %typemap(out) unsigned char* = char*;
+%typemap(out) time_t {
+	PyObject * timestamp = PyFloat_FromDouble($1);
+	if (!timestamp) {
+		PyErr_SetString(PyExc_MemoryError,"Not enough memory");
+		return NULL;
+	}
+	PyObject * time_tuple = Py_BuildValue("(O)", timestamp);
+	if (!time_tuple) {
+		PyErr_SetString(PyExc_MemoryError,"Not enough memory");
+		return NULL;
+	}
+	$result = PyDateTime_FromTimestamp(time_tuple);
+	if (!$result) {
+		PyErr_SetString(PyExc_MemoryError,"Not enough memory");
+		return NULL;
+	}
+}
 
 %include "libgadu.h"
 

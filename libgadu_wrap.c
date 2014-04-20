@@ -3053,6 +3053,8 @@ static swig_module_info swig_module = {swig_types, 110, 0, 0, 0, 0};
 #define SWIG_as_voidptrptr(a) ((void)SWIG_as_voidptr(*a),(void**)(a)) 
 
 
+// Headers
+#include "datetime.h" // PyDateTime_FromTimestamp
 #include "libgadu.h"
 
 
@@ -15857,7 +15859,23 @@ SWIGINTERN PyObject *_wrap_gg_event_msg_time_get(PyObject *SWIGUNUSEDPARM(self),
   }
   arg1 = (struct gg_event_msg *)(argp1);
   result =  ((arg1)->time);
-  resultobj = SWIG_NewPointerObj((time_t *)memcpy((time_t *)malloc(sizeof(time_t)),&result,sizeof(time_t)), SWIGTYPE_p_time_t, SWIG_POINTER_OWN |  0 );
+  {
+    PyObject * timestamp = PyFloat_FromDouble(result);
+    if (!timestamp) {
+      PyErr_SetString(PyExc_MemoryError,"Not enough memory");
+      return NULL;
+    }
+    PyObject * time_tuple = Py_BuildValue("(O)", timestamp);
+    if (!time_tuple) {
+      PyErr_SetString(PyExc_MemoryError,"Not enough memory");
+      return NULL;
+    }
+    resultobj = PyDateTime_FromTimestamp(time_tuple);
+    if (!resultobj) {
+      PyErr_SetString(PyExc_MemoryError,"Not enough memory");
+      return NULL;
+    }
+  }
   return resultobj;
 fail:
   return NULL;
@@ -17080,7 +17098,23 @@ SWIGINTERN PyObject *_wrap_gg_event_status60_time_get(PyObject *SWIGUNUSEDPARM(s
   }
   arg1 = (struct gg_event_status60 *)(argp1);
   result =  ((arg1)->time);
-  resultobj = SWIG_NewPointerObj((time_t *)memcpy((time_t *)malloc(sizeof(time_t)),&result,sizeof(time_t)), SWIGTYPE_p_time_t, SWIG_POINTER_OWN |  0 );
+  {
+    PyObject * timestamp = PyFloat_FromDouble(result);
+    if (!timestamp) {
+      PyErr_SetString(PyExc_MemoryError,"Not enough memory");
+      return NULL;
+    }
+    PyObject * time_tuple = Py_BuildValue("(O)", timestamp);
+    if (!time_tuple) {
+      PyErr_SetString(PyExc_MemoryError,"Not enough memory");
+      return NULL;
+    }
+    resultobj = PyDateTime_FromTimestamp(time_tuple);
+    if (!resultobj) {
+      PyErr_SetString(PyExc_MemoryError,"Not enough memory");
+      return NULL;
+    }
+  }
   return resultobj;
 fail:
   return NULL;
@@ -17562,7 +17596,23 @@ SWIGINTERN PyObject *_wrap_gg_event_notify60_time_get(PyObject *SWIGUNUSEDPARM(s
   }
   arg1 = (struct gg_event_notify60 *)(argp1);
   result =  ((arg1)->time);
-  resultobj = SWIG_NewPointerObj((time_t *)memcpy((time_t *)malloc(sizeof(time_t)),&result,sizeof(time_t)), SWIGTYPE_p_time_t, SWIG_POINTER_OWN |  0 );
+  {
+    PyObject * timestamp = PyFloat_FromDouble(result);
+    if (!timestamp) {
+      PyErr_SetString(PyExc_MemoryError,"Not enough memory");
+      return NULL;
+    }
+    PyObject * time_tuple = Py_BuildValue("(O)", timestamp);
+    if (!time_tuple) {
+      PyErr_SetString(PyExc_MemoryError,"Not enough memory");
+      return NULL;
+    }
+    resultobj = PyDateTime_FromTimestamp(time_tuple);
+    if (!resultobj) {
+      PyErr_SetString(PyExc_MemoryError,"Not enough memory");
+      return NULL;
+    }
+  }
   return resultobj;
 fail:
   return NULL;
@@ -20503,7 +20553,23 @@ SWIGINTERN PyObject *_wrap_gg_multilogon_session_logon_time_get(PyObject *SWIGUN
   }
   arg1 = (struct gg_multilogon_session *)(argp1);
   result =  ((arg1)->logon_time);
-  resultobj = SWIG_NewPointerObj((time_t *)memcpy((time_t *)malloc(sizeof(time_t)),&result,sizeof(time_t)), SWIGTYPE_p_time_t, SWIG_POINTER_OWN |  0 );
+  {
+    PyObject * timestamp = PyFloat_FromDouble(result);
+    if (!timestamp) {
+      PyErr_SetString(PyExc_MemoryError,"Not enough memory");
+      return NULL;
+    }
+    PyObject * time_tuple = Py_BuildValue("(O)", timestamp);
+    if (!time_tuple) {
+      PyErr_SetString(PyExc_MemoryError,"Not enough memory");
+      return NULL;
+    }
+    resultobj = PyDateTime_FromTimestamp(time_tuple);
+    if (!resultobj) {
+      PyErr_SetString(PyExc_MemoryError,"Not enough memory");
+      return NULL;
+    }
+  }
   return resultobj;
 fail:
   return NULL;
@@ -41113,6 +41179,9 @@ SWIG_init(void) {
 #endif
   
   SWIG_InstallConstants(d,swig_const_table);
+  
+  
+  PyDateTime_IMPORT;
   
   SWIG_Python_SetConstant(d, "GG_RESOLVER_DEFAULT",SWIG_From_int((int)(GG_RESOLVER_DEFAULT)));
   SWIG_Python_SetConstant(d, "GG_RESOLVER_FORK",SWIG_From_int((int)(GG_RESOLVER_FORK)));

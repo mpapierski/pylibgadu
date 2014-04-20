@@ -68,5 +68,29 @@ int wrap_gg_send_message(struct gg_session *sess, int msgclass, unsigned int rec
 	}
 }
 
+// Handle array of ints in gg_notify function
+%typemap(in) (uin_t * userlist, int count) {
+  int i;
+  if (!PyList_Check($input)) {
+    PyErr_SetString(PyExc_ValueError, "Expecting a list $1 $2");
+    return NULL;
+  }
+  $2 = PyList_Size($input);
+  $1 = (uin_t **) malloc($2*sizeof(uin_t *));
+  for (i = 0; i < $2; i++) {
+    PyObject *s = PyList_GetItem($input,i);
+    if (!PyInt_Check(s)) {
+        free($1);
+        PyErr_SetString(PyExc_ValueError, "List items must be numbers");
+        return NULL;
+    }
+    $1[i] = PyInt_AsLong(s);
+  }
+}
+
+%typemap(freearg) (uin_t * userlist, int count) {
+   if ($1) free($1);
+}
+
 %include "libgadu.h"
 

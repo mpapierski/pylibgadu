@@ -22862,31 +22862,34 @@ SWIGINTERN PyObject *_wrap_gg_notify(PyObject *SWIGUNUSEDPARM(self), PyObject *a
   int arg3 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
-  int val3 ;
-  int ecode3 = 0 ;
   PyObject * obj0 = 0 ;
   PyObject * obj1 = 0 ;
-  PyObject * obj2 = 0 ;
   int result;
   
-  if (!PyArg_ParseTuple(args,(char *)"OOO:gg_notify",&obj0,&obj1,&obj2)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:gg_notify",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_gg_session, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "gg_notify" "', argument " "1"" of type '" "struct gg_session *""'"); 
   }
   arg1 = (struct gg_session *)(argp1);
-  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_uint32_t, 0 |  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "gg_notify" "', argument " "2"" of type '" "uin_t *""'"); 
+  {
+    int i;
+    if (!PyList_Check(obj1)) {
+      PyErr_SetString(PyExc_ValueError, "Expecting a list arg2 arg3");
+      return NULL;
+    }
+    arg3 = PyList_Size(obj1);
+    arg2 = (uin_t **) malloc(arg3*sizeof(uin_t *));
+    for (i = 0; i < arg3; i++) {
+      PyObject *s = PyList_GetItem(obj1,i);
+      if (!PyInt_Check(s)) {
+        free(arg2);
+        PyErr_SetString(PyExc_ValueError, "List items must be numbers");
+        return NULL;
+      }
+      arg2[i] = PyInt_AsLong(s);
+    }
   }
-  arg2 = (uin_t *)(argp2);
-  ecode3 = SWIG_AsVal_int(obj2, &val3);
-  if (!SWIG_IsOK(ecode3)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "gg_notify" "', argument " "3"" of type '" "int""'");
-  } 
-  arg3 = (int)(val3);
   {
     result = (int)gg_notify(arg1,arg2,arg3);
     if (result == -1) {
@@ -22896,8 +22899,14 @@ SWIGINTERN PyObject *_wrap_gg_notify(PyObject *SWIGUNUSEDPARM(self), PyObject *a
     }
   }
   resultobj = SWIG_From_int((int)(result));
+  {
+    if (arg2) free(arg2);
+  }
   return resultobj;
 fail:
+  {
+    if (arg2) free(arg2);
+  }
   return NULL;
 }
 
